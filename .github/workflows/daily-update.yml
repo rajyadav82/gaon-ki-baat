@@ -1,39 +1,47 @@
-name: Gaon Ki Baat Daily Update
+name: Gaon Ki Baat Daily News
 
 on:
   schedule:
-    # रोज सुबह 8:00 बजे IST
-    # GitHub cron UTC में चलता है
     - cron: "30 2 * * *"
 
-  # GitHub Actions से manually भी चला सकें
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  daily-update:
+  update-news:
+
     runs-on: ubuntu-latest
 
     steps:
-      - name: Repository checkout
+
+      - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Show date
-        run: |
-          echo "Gaon Ki Baat Daily Update"
-          echo "Date: $(date)"
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.x"
 
-      - name: Create daily status
+      - name: Update news
         run: |
-          mkdir -p data
-          echo "Last update: $(date -u)" > data/last-update.txt
+          python scripts/update-news.py
 
-      - name: Save changes
+      - name: Check changes
         run: |
+          git status
+          echo "News update completed."
+
+      - name: Commit and push
+        run: |
+
           git config user.name "github-actions[bot]"
+
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add data/last-update.txt
+          git add data/news.json
 
-          git diff --cached --quiet || git commit -m "Daily website update"
+          git diff --cached --quiet || git commit -m "Update daily news"
 
           git push
