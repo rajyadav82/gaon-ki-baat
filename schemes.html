@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>सरकारी योजनाएं | गांव की बात</title>
+
+<style>
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+font-family:Arial,sans-serif;
+background:#f5f7fb;
+color:#172033;
+}
+
+header{
+background:linear-gradient(135deg,#1e3a8a,#2563eb);
+color:white;
+}
+
+.top{
+max-width:1150px;
+margin:auto;
+padding:15px 18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:25px;
+font-weight:900;
+color:white;
+text-decoration:none;
+}
+
+.logo span{color:#facc15}
+
+.home{
+color:white;
+text-decoration:none;
+font-size:14px;
+}
+
+.nav{
+background:white;
+border-bottom:1px solid #ddd;
+}
+
+.nav-inner{
+max-width:1150px;
+margin:auto;
+padding:12px 18px;
+display:flex;
+gap:10px;
+overflow-x:auto;
+}
+
+.nav a{
+white-space:nowrap;
+padding:8px 14px;
+border-radius:20px;
+background:#eff6ff;
+color:#1e3a8a;
+text-decoration:none;
+font-size:13px;
+font-weight:bold;
+}
+
+.nav a.active{
+background:#2563eb;
+color:white;
+}
+
+.hero{
+padding:45px 18px;
+background:linear-gradient(135deg,#dbeafe,#bfdbfe);
+}
+
+.hero-inner{
+max-width:1150px;
+margin:auto;
+}
+
+.icon{
+font-size:55px;
+margin-bottom:10px;
+}
+
+.hero h1{
+font-size:clamp(32px,6vw,52px);
+margin-bottom:12px;
+}
+
+.hero p{
+max-width:700px;
+color:#1e3a8a;
+font-size:17px;
+line-height:1.6;
+}
+
+.container{
+max-width:1150px;
+margin:auto;
+padding:30px 18px;
+}
+
+.title{
+font-size:25px;
+margin-bottom:20px;
+}
+
+.scheme-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.scheme{
+background:white;
+padding:22px;
+border-radius:18px;
+border:1px solid #dbeafe;
+box-shadow:0 5px 20px #0000000a;
+}
+
+.scheme-icon{
+font-size:43px;
+margin-bottom:12px;
+}
+
+.scheme h2{
+font-size:19px;
+margin-bottom:8px;
+}
+
+.scheme p{
+font-size:13px;
+color:#64748b;
+line-height:1.55;
+}
+
+.scheme-btn{
+display:inline-block;
+margin-top:15px;
+padding:9px 13px;
+background:#2563eb;
+color:white;
+border-radius:8px;
+text-decoration:none;
+font-size:12px;
+font-weight:bold;
+}
+
+.notice{
+margin-top:25px;
+background:#fff7ed;
+border-left:5px solid #f97316;
+padding:20px;
+border-radius:10px;
+}
+
+.notice h3{
+margin-bottom:7px;
+}
+
+.notice p{
+font-size:13px;
+line-height:1.55;
+color:#7c2d12;
+}
+
+footer{
+margin-top:30px;
+background:#111827;
+color:#cbd5e1;
+text-align:center;
+padding:30px;
+font-size:13px;
+}
+
+@media(max-width:800px){
+.scheme-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:550px){
+.scheme-grid{grid-template-columns:1fr}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="top">
+
+<a href="index.html" class="logo">
+गांव की <span>बात</span>
+</a>
+
+<a href="index.html" class="home">← होम</a>
+
+</div>
+</header>
+
+<nav class="nav">
+<div class="nav-inner">
+
+<a href="news.html">📰 खबरें</a>
+<a href="emotional.html">❤️ भावुक</a>
+<a href="funny.html">😂 मजेदार</a>
+<a href="farming.html">🌾 खेती</a>
+<a href="schemes.html" class="active">💰 योजनाएं</a>
+<a href="entertainment.html">🎬 मनोरंजन</a>
+<a href="deals.html">🛍️ सामान</a>
+
+</div>
+</nav>
+
+<section class="hero">
+
+<div class="hero-inner">
+
+<div class="icon">💰</div>
+
+<h1>सरकारी योजनाएं</h1>
+
+<p>
+सरकार की योजनाओं, सुविधाओं और
+लाभ से जुड़ी उपयोगी जानकारी।
+</p>
+
+</div>
+
+</section>
+
+<main class="container">
+
+<h2 class="title">📢 योजनाओं की जानकारी</h2>
+
+<div class="scheme-grid">
+
+<div class="scheme">
+<div class="scheme-icon">🌾</div>
+<h2>किसानों के लिए योजनाएं</h2>
+<p>
+किसानों के लिए उपलब्ध सरकारी
+योजनाओं की जानकारी।
+</p>
+<a href="#" class="scheme-btn">जानकारी देखें →</a>
+</div>
+
+<div class="scheme">
+<div class="scheme-icon">🏠</div>
+<h2>आवास से जुड़ी योजनाएं</h2>
+<p>
+घर और आवास से संबंधित सरकारी
+योजनाओं की जानकारी।
+</p>
+<a href="#" class="scheme-btn">जानकारी देखें →</a>
+</div>
+
+<div class="scheme">
+<div class="scheme-icon">👩</div>
+<h2>महिलाओं के लिए योजनाएं</h2>
+<p>
+महिलाओं के लिए उपलब्ध सरकारी
+सुविधाओं की जानकारी।
+</p>
+<a href="#" class="scheme-btn">जानकारी देखें →</a>
+</div>
+
+<div class="scheme">
+<div class="scheme-icon">🎓</div>
+<h2>छात्रों के लिए योजनाएं</h2>
+<p>
+शिक्षा और छात्रवृत्ति से जुड़ी
+सरकारी जानकारी।
+</p>
+<a href="#" class="scheme-btn">जानकारी देखें →</a>
+</div>
+
+<div class="scheme">
+<div class="scheme-icon">💳</div>
+<h2>पेंशन योजनाएं</h2>
+<p>
+पेंशन और सामाजिक सुरक्षा से जुड़ी
+जानकारी।
+</p>
+<a href="#" class="scheme-btn">जानकारी देखें →</a>
+</div>
+
+<div class="scheme">
+<div class="scheme-icon">🏥</div>
+<h2>स्वास्थ्य योजनाएं</h2>
+<p>
+सरकारी स्वास्थ्य सुविधाओं और
+योजनाओं की जानकारी।
+</p>
+<a href="#" class="scheme-btn">जानकारी देखें →</a>
+</div>
+
+</div>
+
+<div class="notice">
+
+<h3>⚠️ जरूरी सूचना</h3>
+
+<p>
+सरकारी योजनाओं की eligibility, तारीख,
+राशि और आवेदन प्रक्रिया बदल सकती है।
+किसी योजना के लिए आवेदन करने से पहले
+संबंधित आधिकारिक सरकारी वेबसाइट पर
+जानकारी जरूर जांचें।
+</p>
+
+</div>
+
+</main>
+
+<footer>
+© 2026 गांव की बात<br><br>
+सरकारी जानकारी • योजनाएं • सुविधाएं
+</footer>
+
+</body>
+</html>
