@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>सस्ते और काम के सामान | गांव की बात</title>
+
+<style>
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+font-family:Arial,sans-serif;
+background:#f8fafc;
+color:#172033;
+}
+
+header{
+background:linear-gradient(135deg,#064e3b,#059669);
+color:white;
+}
+
+.top{
+max-width:1150px;
+margin:auto;
+padding:15px 18px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+font-size:25px;
+font-weight:900;
+color:white;
+text-decoration:none;
+}
+
+.logo span{color:#facc15}
+
+.home{
+color:white;
+text-decoration:none;
+font-size:14px;
+}
+
+.nav{
+background:white;
+border-bottom:1px solid #ddd;
+}
+
+.nav-inner{
+max-width:1150px;
+margin:auto;
+padding:12px 18px;
+display:flex;
+gap:10px;
+overflow-x:auto;
+}
+
+.nav a{
+white-space:nowrap;
+padding:8px 14px;
+border-radius:20px;
+background:#ecfdf5;
+color:#065f46;
+text-decoration:none;
+font-size:13px;
+font-weight:bold;
+}
+
+.nav a.active{
+background:#059669;
+color:white;
+}
+
+.hero{
+padding:45px 18px;
+background:linear-gradient(135deg,#d1fae5,#a7f3d0);
+}
+
+.hero-inner{
+max-width:1150px;
+margin:auto;
+}
+
+.icon{
+font-size:55px;
+margin-bottom:10px;
+}
+
+.hero h1{
+font-size:clamp(32px,6vw,52px);
+margin-bottom:12px;
+}
+
+.hero p{
+max-width:700px;
+color:#065f46;
+font-size:17px;
+line-height:1.6;
+}
+
+.container{
+max-width:1150px;
+margin:auto;
+padding:30px 18px;
+}
+
+.title{
+font-size:25px;
+margin-bottom:20px;
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:16px;
+}
+
+.product{
+background:white;
+border-radius:18px;
+overflow:hidden;
+border:1px solid #e5e7eb;
+box-shadow:0 5px 20px #0000000a;
+}
+
+.product-image{
+height:190px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:65px;
+background:#ecfdf5;
+}
+
+.product-content{
+padding:16px;
+}
+
+.product h2{
+font-size:17px;
+line-height:1.4;
+margin-bottom:7px;
+}
+
+.product p{
+font-size:12px;
+color:#64748b;
+line-height:1.5;
+}
+
+.price{
+font-size:20px;
+font-weight:900;
+color:#059669;
+margin-top:10px;
+}
+
+.view{
+display:block;
+margin-top:12px;
+padding:10px;
+text-align:center;
+border-radius:9px;
+background:#059669;
+color:white;
+text-decoration:none;
+font-size:13px;
+font-weight:bold;
+}
+
+.note{
+margin-top:25px;
+background:white;
+border:1px solid #d1fae5;
+border-radius:15px;
+padding:20px;
+}
+
+.note p{
+font-size:13px;
+color:#64748b;
+line-height:1.55;
+}
+
+footer{
+margin-top:30px;
+background:#111827;
+color:#cbd5e1;
+text-align:center;
+padding:30px;
+font-size:13px;
+}
+
+@media(max-width:900px){
+.product-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:550px){
+.product-grid{grid-template-columns:1fr 1fr}
+.product-image{height:150px}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="top">
+
+<a href="index.html" class="logo">
+गांव की <span>बात</span>
+</a>
+
+<a href="index.html" class="home">← होम</a>
+
+</div>
+
+</header>
+
+<nav class="nav">
+
+<div class="nav-inner">
+
+<a href="news.html">📰 खबरें</a>
+<a href="emotional.html">❤️ भावुक</a>
+<a href="funny.html">😂 मजेदार</a>
+<a href="farming.html">🌾 खेती</a>
+<a href="schemes.html">💰 योजनाएं</a>
+<a href="entertainment.html">🎬 मनोरंजन</a>
+<a href="deals.html" class="active">🛍️ सामान</a>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-inner">
+
+<div class="icon">🛍️</div>
+
+<h1>सस्ते और काम के सामान</h1>
+
+<p>
+घर, किचन, मोबाइल, फैशन और रोजमर्रा
+के काम आने वाले उपयोगी सामान।
+</p>
+
+</div>
+
+</section>
+
+<main class="container">
+
+<h2 class="title">🔥 आज के काम के सामान</h2>
+
+<div class="product-grid">
+
+<div class="product">
+
+<div class="product-image">
+🧹
+</div>
+
+<div class="product-content">
+
+<h2>
+घर की सफाई का उपयोगी सामान
+</h2>
+
+<p>
+रोजमर्रा के घर के काम में उपयोगी।
+</p>
+
+<div class="price">
+₹99 से
+</div>
+
+<a href="#" class="view">
+सामान देखें →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+🍳
+</div>
+
+<div class="product-content">
+
+<h2>
+किचन का काम आसान करने वाला सामान
+</h2>
+
+<p>
+किचन के लिए उपयोगी product।
+</p>
+
+<div class="price">
+₹149 से
+</div>
+
+<a href="#" class="view">
+सामान देखें →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+📱
+</div>
+
+<div class="product-content">
+
+<h2>
+मोबाइल के उपयोगी accessories
+</h2>
+
+<p>
+मोबाइल से जुड़े रोजमर्रा के सामान।
+</p>
+
+<div class="price">
+₹79 से
+</div>
+
+<a href="#" class="view">
+सामान देखें →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+👚
+</div>
+
+<div class="product-content">
+
+<h2>
+महिलाओं के लिए उपयोगी सामान
+</h2>
+
+<p>
+फैशन और रोजमर्रा के products।
+</p>
+
+<div class="price">
+₹199 से
+</div>
+
+<a href="#" class="view">
+सामान देखें →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+🔦
+</div>
+
+<div class="product-content">
+
+<h2>
+घर के लिए useful gadgets
+</h2>
+
+<p>
+छोटे लेकिन काम आने वाले gadgets।
+</p>
+
+<div class="price">
+₹129 से
+</div>
+
+<a href="#" class="view">
+सामान देखें →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+🎒
+</div>
+
+<div class="product-content">
+
+<h2>
+बच्चों और परिवार के काम के सामान
+</h2>
+
+<p>
+घर और बच्चों के लिए उपयोगी चीजें।
+</p>
+
+<div class="price">
+₹99 से
+</div>
+
+<a href="#" class="view">
+सामान देखें →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+👟
+</div>
+
+<div class="product-content">
+
+<h2>
+सस्ते fashion products
+</h2>
+
+<p>
+रोज पहनने के लिए affordable सामान।
+</p>
+
+<div class="price">
+₹199 से
+</div>
+
+<a href="#" class="view">
+सामान देखें →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+🏠
+</div>
+
+<div class="product-content">
+
+<h2>
+घर के छोटे useful products
+</h2>
+
+<p>
+रोजमर्रा की जिंदगी को आसान बनाने वाले सामान।
+</p>
+
+<div class="price">
+₹89 से
+</div>
+
+<a href="#" class="view">
+सामान देखें →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="note">
+
+<p>
+💡 <strong>ध्यान दें:</strong>
+यहां दिखाए गए prices सिर्फ demo हैं।
+Real products जोड़ते समय actual price,
+availability और product details update करें।
+</p>
+
+</div>
+
+</main>
+
+<footer>
+
+© 2026 गांव की बात
+
+<br><br>
+
+काम के सामान • Deals • Useful Products
+
+</footer>
+
+</body>
+</html>
