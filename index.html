@@ -716,9 +716,8 @@ async function loadLatestPosts(){
         articles.forEach(article=>{
             const card=document.createElement("a");
             card.className="article";
-            card.href=safeNewsURL(article.url);
-            card.target="_blank";
-            card.rel="noopener noreferrer";
+            card.href="news.html";
+            
             card.style.textDecoration="none";
             card.style.color="inherit";
             card.innerHTML=`
@@ -737,12 +736,6 @@ async function loadLatestPosts(){
 }
 function escapeLatest(value){
     return String(value||"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[ch]));
-}
-function safeNewsURL(value){
-    try{
-        const url=new URL(value,window.location.href);
-        return (url.protocol==="http:"||url.protocol==="https:")?url.href:"#";
-    }catch(e){return "#";}
 }
 loadLatestPosts();
 </script>
