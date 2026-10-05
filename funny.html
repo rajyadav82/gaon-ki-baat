@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>मजेदार वीडियो | गांव की बात</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+font-family:Arial,sans-serif;
+background:#fffaf0;
+color:#171717;
+}
+
+header{
+background:linear-gradient(135deg,#7c2d12,#ea580c);
+color:white;
+}
+
+.top{
+max-width:1150px;
+margin:auto;
+padding:15px 18px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+font-size:25px;
+font-weight:900;
+color:white;
+text-decoration:none;
+}
+
+.logo span{color:#fde047}
+
+.home{
+color:white;
+text-decoration:none;
+font-size:14px;
+}
+
+.nav{
+background:white;
+border-bottom:1px solid #eee;
+}
+
+.nav-inner{
+max-width:1150px;
+margin:auto;
+padding:12px 18px;
+display:flex;
+gap:10px;
+overflow-x:auto;
+}
+
+.nav a{
+white-space:nowrap;
+padding:8px 14px;
+border-radius:20px;
+background:#fff7ed;
+color:#9a3412;
+text-decoration:none;
+font-size:13px;
+font-weight:bold;
+}
+
+.nav a.active{
+background:#ea580c;
+color:white;
+}
+
+.hero{
+padding:45px 18px;
+background:linear-gradient(135deg,#ffedd5,#fed7aa);
+}
+
+.hero-inner{
+max-width:1150px;
+margin:auto;
+}
+
+.hero-icon{
+font-size:55px;
+margin-bottom:10px;
+}
+
+.hero h1{
+font-size:clamp(32px,6vw,52px);
+margin-bottom:12px;
+}
+
+.hero p{
+max-width:700px;
+color:#7c2d12;
+font-size:17px;
+line-height:1.6;
+}
+
+.container{
+max-width:1150px;
+margin:auto;
+padding:30px 18px;
+}
+
+.title{
+font-size:25px;
+margin-bottom:20px;
+}
+
+.video-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.video{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+
+.video-thumb{
+height:210px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:75px;
+background:linear-gradient(135deg,#ffedd5,#fdba74);
+position:relative;
+}
+
+.play{
+position:absolute;
+width:55px;
+height:55px;
+border-radius:50%;
+background:#ea580c;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:23px;
+box-shadow:0 5px 15px #0003;
+}
+
+.video-body{
+padding:17px;
+}
+
+.video-body h2{
+font-size:18px;
+line-height:1.4;
+margin-bottom:8px;
+}
+
+.video-body p{
+font-size:13px;
+color:#6b7280;
+line-height:1.5;
+}
+
+.views{
+margin-top:10px;
+font-size:12px;
+color:#9ca3af;
+}
+
+footer{
+margin-top:30px;
+background:#111827;
+color:#cbd5e1;
+text-align:center;
+padding:30px;
+font-size:13px;
+}
+
+@media(max-width:800px){
+.video-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:550px){
+.video-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="top">
+
+<a href="index.html" class="logo">
+गांव की <span>बात</span>
+</a>
+
+<a href="index.html" class="home">← होम</a>
+
+</div>
+</header>
+
+<nav class="nav">
+<div class="nav-inner">
+
+<a href="news.html">📰 खबरें</a>
+<a href="emotional.html">❤️ भावुक</a>
+<a href="funny.html" class="active">😂 मजेदार</a>
+<a href="farming.html">🌾 खेती</a>
+<a href="schemes.html">💰 योजनाएं</a>
+<a href="entertainment.html">🎬 मनोरंजन</a>
+<a href="deals.html">🛍️ सामान</a>
+
+</div>
+</nav>
+
+<section class="hero">
+<div class="hero-inner">
+
+<div class="hero-icon">😂</div>
+
+<h1>मजेदार वीडियो</h1>
+
+<p>
+देसी अंदाज, मजेदार पल और ऐसे वीडियो
+जो आपका मूड बना दें।
+</p>
+
+</div>
+</section>
+
+<main class="container">
+
+<h2 class="title">🔥 आज के मजेदार वीडियो</h2>
+
+<div class="video-grid">
+
+<div class="video">
+<div class="video-thumb">
+🤣
+<div class="play">▶</div>
+</div>
+<div class="video-body">
+<h2>इस देसी अंदाज को देखकर हंसी नहीं रुकेगी</h2>
+<p>आज का मजेदार वायरल moment.</p>
+<div class="views">👁 आज • Trending</div>
+</div>
+</div>
+
+<div class="video">
+<div class="video-thumb">
+😂
+<div class="play">▶</div>
+</div>
+<div class="video-body">
+<h2>गांव की इस मजेदार situation ने सबको हंसा दिया</h2>
+<p>देसी जिंदगी का मजेदार पल.</p>
+<div class="views">👁 आज • Viral</div>
+</div>
+</div>
+
+<div class="video">
+<div class="video-thumb">
+😆
+<div class="play">▶</div>
+</div>
+<div class="video-body">
+<h2>दो दोस्तों की मजेदार बातचीत हुई वायरल</h2>
+<p>देखकर आपका भी mood fresh हो जाएगा.</p>
+<div class="views">👁 आज • Trending</div>
+</div>
+</div>
+
+<div class="video">
+<div class="video-thumb">
+🤣
+<div class="play">▶</div>
+</div>
+<div class="video-body">
+<h2>देसी जुगाड़ देखकर लोग रह गए हैरान</h2>
+<p>कमाल का देसी अंदाज.</p>
+<div class="views">👁 आज • Viral</div>
+</div>
+</div>
+
+<div class="video">
+<div class="video-thumb">
+😂
+<div class="play">▶</div>
+</div>
+<div class="video-body">
+<h2>इस funny moment का वीडियो तेजी से वायरल</h2>
+<p>सोशल मीडिया पर लोगों को पसंद आया.</p>
+<div class="views">👁 आज • Trending</div>
+</div>
+</div>
+
+<div class="video">
+<div class="video-thumb">
+😜
+<div class="play">▶</div>
+</div>
+<div class="video-body">
+<h2>गांव के इस मजेदार पल ने मचाया धमाल</h2>
+<p>एकदम देसी entertainment.</p>
+<div class="views">👁 आज • Viral</div>
+</div>
+</div>
+
+</div>
+
+</main>
+
+<footer>
+© 2026 गांव की बात<br><br>
+मजेदार वीडियो • देसी मनोरंजन
+</footer>
+
+</body>
+</html>
