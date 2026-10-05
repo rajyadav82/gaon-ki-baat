@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gaon Ki Baat</title>
+
+<meta name="description"
+content="वायरल खबरें, खेती-किसानी, सरकारी योजनाएं, मनोरंजन और उपयोगी जानकारी">
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f7fb;
+    color:#172033;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:
+    linear-gradient(135deg,#111827,#2563eb);
+
+    color:white;
+
+    box-shadow:0 4px 20px rgba(0,0,0,.18);
+}
+
+.nav{
+    max-width:1100px;
+    margin:auto;
+
+    height:68px;
+
+    padding:0 18px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    color:white;
+    text-decoration:none;
+
+    font-size:23px;
+    font-weight:900;
+}
+
+.logo span{
+    color:#fde047;
+}
+
+.menu{
+    display:flex;
+    gap:22px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+
+    font-size:14px;
+    font-weight:bold;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    padding:50px 18px 40px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #e8f0ff 0%,
+        #f5f7fb 100%
+    );
+}
+
+.hero-inner{
+    max-width:1100px;
+    margin:auto;
+}
+
+.hero h1{
+    font-size:clamp(32px,6vw,58px);
+    line-height:1.05;
+
+    margin-bottom:14px;
+}
+
+.hero p{
+    max-width:700px;
+
+    color:#5d687a;
+
+    font-size:17px;
+    line-height:1.6;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-box{
+    max-width:650px;
+
+    margin-top:25px;
+
+    padding:6px;
+
+    display:flex;
+
+    background:white;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 8px 30px rgba(30,64,175,.12);
+}
+
+.search-box input{
+    flex:1;
+
+    border:none;
+    outline:none;
+
+    padding:14px;
+
+    font-size:15px;
+
+    border-radius:10px;
+}
+
+.search-box button{
+    border:none;
+
+    padding:0 22px;
+
+    border-radius:11px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.section{
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:35px 18px;
+}
+
+.section-title{
+    font-size:25px;
+
+    margin-bottom:20px;
+}
+
+/* =========================
+   CATEGORY GRID
+========================= */
+
+.categories{
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:16px;
+}
+
+.category{
+    background:white;
+
+    padding:22px;
+
+    min-height:160px;
+
+    border-radius:20px;
+
+    border:1px solid #e5e7eb;
+
+    text-decoration:none;
+
+    color:#172033;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.05);
+
+    transition:.2s;
+}
+
+.category:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 14px 30px rgba(0,0,0,.10);
+}
+
+.category-icon{
+    font-size:38px;
+
+    margin-bottom:12px;
+}
+
+.category h3{
+    font-size:18px;
+
+    margin-bottom:8px;
+}
+
+.category p{
+    color:#697386;
+
+    font-size:13px;
+
+    line-height:1.5;
+}
+
+/* =========================
+   LATEST ARTICLES
+========================= */
+
+.articles{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:18px;
+}
+
+.article{
+    background:white;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.05);
+}
+
+.article-image{
+    height:170px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:55px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #dbeafe,
+        #bfdbfe
+    );
+}
+
+.article-content{
+    padding:18px;
+}
+
+.article-tag{
+    color:#2563eb;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    text-transform:uppercase;
+}
+
+.article h3{
+    margin-top:8px;
+
+    font-size:18px;
+
+    line-height:1.35;
+}
+
+.article p{
+    margin-top:8px;
+
+    color:#697386;
+
+    font-size:13px;
+
+    line-height:1.5;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    margin-top:20px;
+
+    padding:28px;
+
+    text-align:center;
+
+    border-radius:22px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #111827,
+        #2563eb
+    );
+
+    color:white;
+}
+
+.cta h2{
+    margin-bottom:8px;
+}
+
+.cta p{
+    color:#dbeafe;
+
+    margin-bottom:18px;
+}
+
+.cta-button{
+    display:inline-block;
+
+    padding:14px 28px;
+
+    background:white;
+
+    color:#111827;
+
+    border-radius:12px;
+
+    font-weight:900;
+
+    text-decoration:none;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    margin-top:35px;
+
+    padding:30px 18px;
+
+    background:#111827;
+
+    color:#cbd5e1;
+
+    text-align:center;
+
+    font-size:13px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:850px){
+
+    .categories{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .articles{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .nav{
+        height:60px;
+    }
+
+    .menu{
+        display:none;
+    }
+
+    .hero{
+        padding-top:35px;
+    }
+
+    .categories{
+        grid-template-columns:1fr;
+    }
+
+    .articles{
+        grid-template-columns:1fr;
+    }
+
+    .category{
+        min-height:125px;
+    }
+
+    .search-box{
+        height:54px;
+    }
+
+    .search-box button{
+        padding:0 16px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<div class="nav">
+
+<a href="#" class="logo">
+गांव की <span>बात</span>
+</a>
+
+<nav class="menu">
+
+<a href="#">होम</a>
+
+<a href="#categories">
+कैटेगरी
+</a>
+
+<a href="#latest">
+लेटेस्ट
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+<div class="hero-inner">
+
+<h1>
+आज क्या देखना चाहते हैं?
+</h1>
+
+<p>
+वायरल खबरों से लेकर खेती-किसानी,
+सरकारी योजनाओं, मनोरंजन और काम की
+जानकारी तक — अपनी पसंद की कैटेगरी चुनें।
+</p>
+
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="खबर या कैटेगरी खोजें..."
+>
+
+<button onclick="searchWebsite()">
+खोजें
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CATEGORIES
+========================= -->
+
+<section class="section" id="categories">
+
+<h2 class="section-title">
+🔥 लोकप्रिय कैटेगरी
+</h2>
+
+
+<div class="categories">
+
+
+<a href="news.html" class="category">
+
+<div class="category-icon">
+📰
+</div>
+
+<h3>
+आज की वायरल खबरें
+</h3>
+
+<p>
+गांव, शहर और आसपास की
+चर्चित खबरें।
+</p>
+
+</a>
+
+
+
+<a href="emotional.html" class="category">
+
+<div class="category-icon">
+❤️
+</div>
+
+<h3>
+दिल छू लेने वाली खबरें
+</h3>
+
+<p>
+मदद, इंसानियत और
+प्रेरणादायक कहानियां।
+</p>
+
+</a>
+
+
+
+<a href="funny.html" class="category">
+
+<div class="category-icon">
+😂
+</div>
+
+<h3>
+मजेदार वीडियो
+</h3>
+
+<p>
+देसी अंदाज के मजेदार
+और मनोरंजक वीडियो।
+</p>
+
+</a>
+
+
+
+<a href="farming.html" class="category">
+
+<div class="category-icon">
+🌾
+</div>
+
+<h3>
+खेती-किसानी की जानकारी
+</h3>
+
+<p>
+खेती, पशुपालन और
+किसान उपयोगी जानकारी।
+</p>
+
+</a>
+
+
+
+<a href="schemes.html" class="category">
+
+<div class="category-icon">
+💰
+</div>
+
+<h3>
+सरकारी योजनाएं
+</h3>
+
+<p>
+सरकारी योजनाओं और
+सुविधाओं की जानकारी।
+</p>
+
+</a>
+
+
+
+<a href="entertainment.html" class="category">
+
+<div class="category-icon">
+🎬
+</div>
+
+<h3>
+मनोरंजन
+</h3>
+
+<p>
+फिल्म, टीवी, भोजपुरी और
+वायरल मनोरंजन।
+</p>
+
+</a>
+
+
+
+<a href="deals.html" class="category">
+
+<div class="category-icon">
+🛍️
+</div>
+
+<h3>
+सस्ते और काम के सामान
+</h3>
+
+<p>
+घर और रोजमर्रा के काम
+के उपयोगी सामान।
+</p>
+
+</a>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     LATEST
+========================= -->
+
+<section class="section" id="latest">
+
+<h2 class="section-title">
+🆕 आज की लेटेस्ट पोस्ट
+</h2>
+
+
+<div class="articles">
+
+
+<article class="article">
+
+<div class="article-image">
+📰
+</div>
+
+<div class="article-content">
+
+<div class="article-tag">
+Viral News
+</div>
+
+<h3>
+आज की वायरल खबर यहां दिखाई जाएगी
+</h3>
+
+<p>
+यह जगह बाद में daily automation
+से automatically update की जा सकती है।
+</p>
+
+</div>
+
+</article>
+
+
+
+<article class="article">
+
+<div class="article-image">
+🌾
+</div>
+
+<div class="article-content">
+
+<div class="article-tag">
+Farming
+</div>
+
+<h3>
+किसानों के लिए आज की उपयोगी जानकारी
+</h3>
+
+<p>
+खेती और पशुपालन से जुड़ी
+नई जानकारी यहां आएगी।
+</p>
+
+</div>
+
+</article>
+
+
+
+<article class="article">
+
+<div class="article-image">
+💰
+</div>
+
+<div class="article-content">
+
+<div class="article-tag">
+Government
+</div>
+
+<h3>
+सरकारी योजनाओं की नई जानकारी
+</h3>
+
+<p>
+नई योजनाओं और सरकारी updates
+यहां दिखाई जा सकती हैं।
+</p>
+
+</div>
+
+</article>
+
+
+</div>
+
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<div class="cta">
+
+<h2>
+🔥 रोज नई जानकारी के लिए जुड़े रहें
+</h2>
+
+<p>
+अपनी पसंद की कैटेगरी चुनें और
+नई पोस्ट देखें।
+</p>
+
+<a
+href="#categories"
+class="cta-button"
+>
+कैटेगरी देखें →
+</a>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+© 2026 Gaon Ki Baat
+
+<br><br>
+
+आपकी जानकारी, मनोरंजन और उपयोगी
+कंटेंट का एक आसान प्लेटफॉर्म।
+
+</footer>
+
+
+
+<!-- =========================
+     SEARCH SCRIPT
+========================= -->
+
+<script>
+
+function searchWebsite(){
+
+    let input =
+    document
+    .getElementById("searchInput")
+    .value
+    .toLowerCase()
+    .trim();
+
+
+    if(input === ""){
+
+        alert(
+        "कृपया कुछ खोजें।"
+        );
+
+        return;
+    }
+
+
+    let links =
+    document.querySelectorAll(
+    ".category"
+    );
+
+
+    let found = false;
+
+
+    links.forEach(function(link){
+
+        let text =
+        link.innerText
+        .toLowerCase();
+
+
+        if(text.includes(input)){
+
+            link.scrollIntoView({
+                behavior:"smooth",
+                block:"center"
+            });
+
+            found = true;
+
+        }
+
+    });
+
+
+    if(!found){
+
+        alert(
+        "इस नाम की कैटेगरी अभी नहीं मिली।"
+        );
+
+    }
+
+}
+
+</script>
+
+
+</body>
+</html>
