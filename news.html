@@ -1,485 +1,281 @@
+```html
 <!DOCTYPE html>
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>आज की वायरल खबरें | गांव की बात</title>
+<title>आज की ताजा खबरें | गांव की बात</title>
+
+<meta name="description" content="गांव की बात पर पढ़ें आज की ताजा वायरल और जरूरी खबरें।">
 
 <style>
 
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+* {
+    box-sizing: border-box;
 }
 
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f3f5f8;
-    color:#171717;
+body {
+    margin: 0;
+    font-family: Arial, "Noto Sans Devanagari", sans-serif;
+    background: #f4f5f7;
+    color: #222;
 }
 
 /* HEADER */
 
-header{
-    background:#111827;
-    color:white;
+header {
+    background: #111827;
+    color: white;
+    padding: 18px 15px;
 }
 
-.top{
-    max-width:1150px;
-    margin:auto;
-    padding:15px 18px;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+.header-inner {
+    max-width: 1150px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.logo{
-    font-size:25px;
-    font-weight:900;
-    color:white;
-    text-decoration:none;
+.logo {
+    font-size: 25px;
+    font-weight: bold;
 }
 
-.logo span{
-    color:#facc15;
+.logo span {
+    color: #facc15;
 }
 
-.home{
-    color:white;
-    text-decoration:none;
-    font-size:14px;
+.home-btn {
+    background: #facc15;
+    color: #111;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* BREAKING */
+/* BREAKING NEWS */
 
-.breaking{
-    background:#dc2626;
-    color:white;
+.breaking {
+    background: #dc2626;
+    color: white;
+    padding: 10px 15px;
+    overflow: hidden;
 }
 
-.breaking-inner{
-    max-width:1150px;
-    margin:auto;
-
-    display:flex;
-    align-items:center;
-
-    min-height:42px;
-
-    overflow:hidden;
+.breaking-inner {
+    max-width: 1150px;
+    margin: auto;
+    white-space: nowrap;
 }
 
-.breaking-label{
-    background:#991b1b;
-    padding:12px 16px;
-
-    font-size:13px;
-    font-weight:900;
-
-    white-space:nowrap;
-}
-
-.ticker{
-    padding-left:15px;
-
-    font-size:14px;
-    font-weight:bold;
-
-    white-space:nowrap;
-
-    animation:ticker 18s linear infinite;
-}
-
-@keyframes ticker{
-
-    from{
-        transform:translateX(100%);
-    }
-
-    to{
-        transform:translateX(-100%);
-    }
-
+.breaking strong {
+    background: #991b1b;
+    padding: 6px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
 }
 
 /* NAVIGATION */
 
-.categories{
-    background:white;
-    border-bottom:1px solid #ddd;
+.nav {
+    background: white;
+    border-bottom: 1px solid #ddd;
 }
 
-.category-nav{
-    max-width:1150px;
-    margin:auto;
-
-    padding:12px 18px;
-
-    display:flex;
-    gap:10px;
-
-    overflow-x:auto;
+.nav-inner {
+    max-width: 1150px;
+    margin: auto;
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    padding: 12px 15px;
 }
 
-.category-nav a{
-    white-space:nowrap;
-
-    padding:8px 13px;
-
-    border-radius:20px;
-
-    background:#f1f5f9;
-
-    color:#374151;
-
-    text-decoration:none;
-
-    font-size:13px;
-    font-weight:bold;
-}
-
-.category-nav a.active{
-    background:#2563eb;
-    color:white;
+.nav a {
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 /* MAIN */
 
-.container{
-    max-width:1150px;
-    margin:auto;
-    padding:25px 18px;
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 25px 15px;
 }
 
-.page-title{
-    margin-bottom:20px;
+.page-title {
+    margin-bottom: 25px;
 }
 
-.page-title h1{
-    font-size:32px;
-    margin-bottom:6px;
+.page-title h1 {
+    margin: 0 0 8px;
+    font-size: 30px;
 }
 
-.page-title p{
-    color:#6b7280;
-    font-size:14px;
+.page-title p {
+    margin: 0;
+    color: #666;
 }
 
 /* LAYOUT */
 
-.layout{
-    display:grid;
-
-    grid-template-columns:
-    minmax(0,2fr)
-    minmax(280px,1fr);
-
-    gap:22px;
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 25px;
 }
 
-/* FEATURED */
+/* NEWS */
 
-.featured{
-    background:white;
-    border-radius:16px;
-    overflow:hidden;
-
-    box-shadow:
-    0 4px 18px rgba(0,0,0,.07);
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
 }
 
-.featured-image{
-    height:330px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:90px;
-
-    background:
-    linear-gradient(
-        135deg,
-        #dbeafe,
-        #bfdbfe
-    );
+.news-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+    border: 1px solid #eee;
 }
 
-.featured-content{
-    padding:22px;
+.news-card h2 {
+    font-size: 19px;
+    line-height: 1.5;
+    margin: 0 0 10px;
 }
 
-.tag{
-    display:inline-block;
-
-    background:#fee2e2;
-    color:#dc2626;
-
-    padding:5px 9px;
-
-    border-radius:6px;
-
-    font-size:11px;
-    font-weight:900;
+.news-card p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0 0 12px;
 }
 
-.featured h2{
-    font-size:27px;
-    line-height:1.25;
-
-    margin:12px 0 8px;
+.news-date {
+    color: #888;
+    font-size: 12px;
+    margin-bottom: 14px;
 }
 
-.meta{
-    color:#9ca3af;
-    font-size:12px;
-}
-
-/* NEWS FEED */
-
-.feed-title{
-    font-size:22px;
-    margin:25px 0 14px;
-}
-
-.news-item{
-    display:grid;
-
-    grid-template-columns:170px 1fr;
-
-    gap:15px;
-
-    padding:14px 0;
-
-    border-bottom:1px solid #e5e7eb;
-}
-
-.news-thumb{
-    height:105px;
-
-    border-radius:11px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:45px;
-
-    background:
-    linear-gradient(
-        135deg,
-        #e0f2fe,
-        #dbeafe
-    );
-}
-
-.news-content h3{
-    font-size:18px;
-    line-height:1.35;
-
-    margin:7px 0;
-}
-
-.news-content p{
-    color:#6b7280;
-
-    font-size:13px;
-
-    line-height:1.45;
-}
-
-.time{
-    color:#9ca3af;
-    font-size:11px;
+.read-btn {
+    display: inline-block;
+    background: #dc2626;
+    color: white;
+    text-decoration: none;
+    padding: 9px 13px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 /* SIDEBAR */
 
-.sidebar{
-    display:flex;
-    flex-direction:column;
-    gap:18px;
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
-.side-box{
-    background:white;
-
-    border-radius:16px;
-
-    padding:18px;
-
-    box-shadow:
-    0 4px 18px rgba(0,0,0,.06);
+.sidebar-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.07);
 }
 
-.side-title{
-    font-size:19px;
-
-    padding-bottom:12px;
-
-    border-bottom:2px solid #2563eb;
-
-    margin-bottom:5px;
+.sidebar-box h3 {
+    margin-top: 0;
+    border-bottom: 2px solid #dc2626;
+    padding-bottom: 10px;
 }
 
-.trend{
-    padding:13px 0;
-
-    border-bottom:1px solid #eee;
-
-    display:flex;
-    gap:10px;
+.trending-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
-.number{
-    min-width:28px;
-    height:28px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border-radius:50%;
-
-    background:#2563eb;
-
-    color:white;
-
-    font-weight:bold;
+.trending-item:last-child {
+    border-bottom: none;
 }
 
-.trend h4{
-    font-size:14px;
-    line-height:1.35;
-}
+/* STATUS */
 
-/* AD / CTA */
-
-.info-box{
-    background:
-    linear-gradient(
-        135deg,
-        #111827,
-        #2563eb
-    );
-
-    color:white;
-
-    border-radius:16px;
-
-    padding:22px;
-}
-
-.info-box h3{
-    font-size:20px;
-    margin-bottom:8px;
-}
-
-.info-box p{
-    color:#dbeafe;
-    font-size:13px;
-    line-height:1.5;
+.status {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    color: #666;
 }
 
 /* FOOTER */
 
-footer{
-    margin-top:30px;
+footer {
+    margin-top: 40px;
+    background: #111827;
+    color: #bbb;
+    text-align: center;
+    padding: 25px 15px;
+}
 
-    background:#111827;
-
-    color:#cbd5e1;
-
-    text-align:center;
-
-    padding:28px 15px;
-
-    font-size:13px;
+footer strong {
+    color: white;
 }
 
 /* MOBILE */
 
-@media(max-width:850px){
+@media (max-width: 800px) {
 
-    .layout{
-        grid-template-columns:1fr;
+    .layout {
+        grid-template-columns: 1fr;
     }
 
-    .sidebar{
-        margin-top:5px;
+    .news-grid {
+        grid-template-columns: 1fr;
     }
 
-}
-
-@media(max-width:600px){
-
-    .top{
-        padding:13px 15px;
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .logo{
-        font-size:21px;
+    .page-title h1 {
+        font-size: 25px;
     }
-
-    .page-title h1{
-        font-size:27px;
-    }
-
-    .featured-image{
-        height:230px;
-        font-size:70px;
-    }
-
-    .featured h2{
-        font-size:22px;
-    }
-
-    .news-item{
-        grid-template-columns:115px 1fr;
-        gap:11px;
-    }
-
-    .news-thumb{
-        height:85px;
-        font-size:35px;
-    }
-
-    .news-content h3{
-        font-size:15px;
-    }
-
-    .news-content p{
-        display:none;
-    }
-
 }
 
 </style>
 </head>
 
-
 <body>
-
 
 <!-- HEADER -->
 
 <header>
 
-<div class="top">
+    <div class="header-inner">
 
-<a href="index.html" class="logo">
-गांव की <span>बात</span>
-</a>
+        <div class="logo">
+            गांव <span>की बात</span>
+        </div>
 
-<a href="index.html" class="home">
-← होम
-</a>
+        <a class="home-btn" href="index.html">
+            🏠 होम
+        </a>
 
-</div>
+    </div>
 
 </header>
 
@@ -488,56 +284,42 @@ footer{
 
 <div class="breaking">
 
-<div class="breaking-inner">
+    <div class="breaking-inner">
 
-<div class="breaking-label">
-🔴 BREAKING
-</div>
+        <strong>🔴 BREAKING</strong>
 
-<div class="ticker">
-आज की सबसे बड़ी और वायरल खबरें यहां पढ़ें • ताजा अपडेट • लेटेस्ट खबरें
-</div>
+        <span id="breaking-text">
+            आज की ताजा खबरें यहां दिखाई जाएंगी...
+        </span>
 
-</div>
+    </div>
 
 </div>
 
 
-<!-- CATEGORY NAV -->
+<!-- NAVIGATION -->
 
-<nav class="categories">
+<nav class="nav">
 
-<div class="category-nav">
+    <div class="nav-inner">
 
-<a href="news.html" class="active">
-📰 खबरें
-</a>
+        <a href="index.html">होम</a>
 
-<a href="emotional.html">
-❤️ भावुक खबरें
-</a>
+        <a href="news.html">📰 खबरें</a>
 
-<a href="funny.html">
-😂 मजेदार
-</a>
+        <a href="emotional.html">❤️ भावुक खबरें</a>
 
-<a href="farming.html">
-🌾 खेती
-</a>
+        <a href="funny.html">😂 मजेदार</a>
 
-<a href="schemes.html">
-💰 योजनाएं
-</a>
+        <a href="farming.html">🌾 खेती</a>
 
-<a href="entertainment.html">
-🎬 मनोरंजन
-</a>
+        <a href="schemes.html">💰 योजनाएं</a>
 
-<a href="deals.html">
-🛍️ सामान
-</a>
+        <a href="entertainment.html">🎬 मनोरंजन</a>
 
-</div>
+        <a href="deals.html">🛍️ सामान</a>
+
+    </div>
 
 </nav>
 
@@ -546,295 +328,69 @@ footer{
 
 <main class="container">
 
+    <div class="page-title">
 
-<div class="page-title">
+        <h1>📰 आज की ताजा खबरें</h1>
 
-<h1>
-📰 आज की वायरल खबरें
-</h1>
+        <p>
+            देश और उत्तर प्रदेश से जुड़ी नई और महत्वपूर्ण खबरें
+        </p>
 
-<p>
-देश, प्रदेश, शहर और गांव से जुड़ी चर्चित खबरें
-</p>
+    </div>
 
-</div>
 
+    <div class="layout">
 
-<div class="layout">
+        <!-- NEWS AREA -->
 
+        <section>
 
-<!-- LEFT -->
+            <div id="news-container" class="news-grid">
 
-<section>
+                <div class="status">
+                    ⏳ खबरें लोड हो रही हैं...
+                </div>
 
+            </div>
 
-<!-- FEATURED -->
+        </section>
 
-<article class="featured">
 
-<div class="featured-image">
-📰
-</div>
+        <!-- SIDEBAR -->
 
-<div class="featured-content">
+        <aside class="sidebar">
 
-<span class="tag">
-वायरल खबर
-</span>
+            <div class="sidebar-box">
 
-<h2>
-आज की सबसे बड़ी वायरल खबर यहां दिखाई जाएगी
-</h2>
+                <h3>🔥 अभी ट्रेंडिंग</h3>
 
-<div class="meta">
-आज • गांव की बात
-</div>
+                <div id="trending">
 
-</div>
+                    <div class="trending-item">
+                        खबरें लोड हो रही हैं...
+                    </div>
 
-</article>
+                </div>
 
+            </div>
 
-<!-- FEED -->
 
-<h2 class="feed-title">
-🔥 ताजा खबरें
-</h2>
+            <div class="sidebar-box">
 
+                <h3>📢 गांव की बात</h3>
 
-<!-- NEWS -->
+                <p style="line-height:1.6;color:#555;">
 
-<article class="news-item">
+                    गांव और आम लोगों से जुड़ी जरूरी खबरें,
+                    जानकारी और उपयोगी बातें एक जगह।
 
-<div class="news-thumb">
-🚨
-</div>
+                </p>
 
-<div class="news-content">
+            </div>
 
-<span class="time">
-आज • 10 मिनट पहले
-</span>
+        </aside>
 
-<h3>
-आपके इलाके से जुड़ी महत्वपूर्ण खबर सामने आई
-</h3>
-
-<p>
-इस जगह पर खबर का छोटा सा summary दिखाई देगा।
-</p>
-
-</div>
-
-</article>
-
-
-<article class="news-item">
-
-<div class="news-thumb">
-🏘️
-</div>
-
-<div class="news-content">
-
-<span class="time">
-आज • 25 मिनट पहले
-</span>
-
-<h3>
-गांव और आसपास की इस खबर ने लोगों का ध्यान खींचा
-</h3>
-
-<p>
-खबर का short description यहां automatically आ सकता है।
-</p>
-
-</div>
-
-</article>
-
-
-<article class="news-item">
-
-<div class="news-thumb">
-📢
-</div>
-
-<div class="news-content">
-
-<span class="time">
-आज • 40 मिनट पहले
-</span>
-
-<h3>
-सोशल मीडिया पर तेजी से वायरल हो रही यह खबर
-</h3>
-
-<p>
-Trending news का छोटा summary यहां दिखाई देगा।
-</p>
-
-</div>
-
-</article>
-
-
-<article class="news-item">
-
-<div class="news-thumb">
-🇮🇳
-</div>
-
-<div class="news-content">
-
-<span class="time">
-आज • 1 घंटा पहले
-</span>
-
-<h3>
-देश से जुड़ी आज की बड़ी खबर
-</h3>
-
-<p>
-देशभर की महत्वपूर्ण खबरों का summary।
-</p>
-
-</div>
-
-</article>
-
-
-<article class="news-item">
-
-<div class="news-thumb">
-🔥
-</div>
-
-<div class="news-content">
-
-<span class="time">
-आज • 2 घंटे पहले
-</span>
-
-<h3>
-यह खबर इंटरनेट पर तेजी से हो रही वायरल
-</h3>
-
-<p>
-Trending topic का छोटा description।
-</p>
-
-</div>
-
-</article>
-
-
-</section>
-
-
-<!-- RIGHT SIDEBAR -->
-
-<aside class="sidebar">
-
-
-<!-- TRENDING -->
-
-<div class="side-box">
-
-<h2 class="side-title">
-🔥 अभी ट्रेंडिंग
-</h2>
-
-
-<div class="trend">
-
-<div class="number">
-1
-</div>
-
-<h4>
-आज की सबसे ज्यादा चर्चा वाली खबर
-</h4>
-
-</div>
-
-
-<div class="trend">
-
-<div class="number">
-2
-</div>
-
-<h4>
-सोशल मीडिया पर वायरल हुआ यह मामला
-</h4>
-
-</div>
-
-
-<div class="trend">
-
-<div class="number">
-3
-</div>
-
-<h4>
-लोग लगातार इस खबर को देख रहे हैं
-</h4>
-
-</div>
-
-
-<div class="trend">
-
-<div class="number">
-4
-</div>
-
-<h4>
-गांव से सामने आई बड़ी खबर
-</h4>
-
-</div>
-
-
-<div class="trend">
-
-<div class="number">
-5
-</div>
-
-<h4>
-आज का सबसे चर्चित अपडेट
-</h4>
-
-</div>
-
-</div>
-
-
-<!-- INFO -->
-
-<div class="info-box">
-
-<h3>
-📱 गांव की बात
-</h3>
-
-<p>
-वायरल खबरें, खेती-किसानी,
-सरकारी योजनाएं और मनोरंजन
-एक ही जगह।
-</p>
-
-</div>
-
-
-</aside>
-
-
-</div>
-
+    </div>
 
 </main>
 
@@ -843,14 +399,246 @@ Trending topic का छोटा description।
 
 <footer>
 
-© 2026 गांव की बात
+    <strong>गांव की बात</strong>
 
-<br><br>
+    <br><br>
 
-वायरल खबरें • जानकारी • मनोरंजन
+    आम लोगों की आवाज़ और गांव की खबरों का मंच।
+
+    <br><br>
+
+    © 2026 गांव की बात
 
 </footer>
 
 
+<script>
+
+/* =====================================
+   NEWS DATA LOAD
+===================================== */
+
+async function loadNews() {
+
+    const container =
+        document.getElementById("news-container");
+
+    const trending =
+        document.getElementById("trending");
+
+    const breaking =
+        document.getElementById("breaking-text");
+
+
+    try {
+
+        const response =
+            await fetch("data/news.json?time=" + Date.now());
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "news.json नहीं मिला"
+            );
+
+        }
+
+
+        const data =
+            await response.json();
+
+
+        const articles =
+            data.articles || [];
+
+
+        /* NO NEWS */
+
+        if (articles.length === 0) {
+
+            container.innerHTML = `
+                <div class="status">
+                    अभी नई खबर उपलब्ध नहीं है।
+                </div>
+            `;
+
+            return;
+
+        }
+
+
+        /* CLEAR */
+
+        container.innerHTML = "";
+
+        trending.innerHTML = "";
+
+
+        /* BREAKING NEWS */
+
+        breaking.textContent =
+            articles[0].title;
+
+
+        /* NEWS CARDS */
+
+        articles.forEach((article, index) => {
+
+
+            const card =
+                document.createElement("article");
+
+
+            card.className =
+                "news-card";
+
+
+            const title =
+                escapeHTML(article.title);
+
+
+            const description =
+                escapeHTML(
+                    article.description ||
+                    "इस खबर की पूरी जानकारी पढ़ें।"
+                );
+
+
+            const date =
+                escapeHTML(
+                    article.date || ""
+                );
+
+
+            const url =
+                safeURL(article.url);
+
+
+            card.innerHTML = `
+
+                <h2>
+                    ${title}
+                </h2>
+
+                <p>
+                    ${description}
+                </p>
+
+                <div class="news-date">
+                    🕒 ${date}
+                </div>
+
+                <a
+                    class="read-btn"
+                    href="${url}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    पूरी खबर पढ़ें →
+                </a>
+
+            `;
+
+
+            container.appendChild(card);
+
+
+            /* TRENDING */
+
+            if (index < 5) {
+
+                const item =
+                    document.createElement("div");
+
+
+                item.className =
+                    "trending-item";
+
+
+                item.innerHTML = `
+                    ${index + 1}. ${title}
+                `;
+
+
+                trending.appendChild(item);
+
+            }
+
+        });
+
+
+    } catch (error) {
+
+        console.error(error);
+
+
+        container.innerHTML = `
+
+            <div class="status">
+
+                ⚠️ खबरें अभी लोड नहीं हो पा रही हैं।
+
+                <br><br>
+
+                थोड़ी देर बाद फिर कोशिश करें।
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+/* =====================================
+   SECURITY HELPERS
+===================================== */
+
+function escapeHTML(text) {
+
+    const div =
+        document.createElement("div");
+
+    div.textContent =
+        text || "";
+
+    return div.innerHTML;
+
+}
+
+
+function safeURL(url) {
+
+    try {
+
+        const parsed =
+            new URL(url);
+
+
+        if (
+            parsed.protocol === "http:" ||
+            parsed.protocol === "https:"
+        ) {
+
+            return parsed.href;
+
+        }
+
+    } catch (error) {}
+
+    return "#";
+
+}
+
+
+/* START */
+
+loadNews();
+
+</script>
+
 </body>
 </html>
+```
