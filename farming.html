@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>खेती-किसानी | गांव की बात</title>
+
+<style>
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+font-family:Arial,sans-serif;
+background:#f1f8f3;
+color:#172033;
+}
+
+header{
+background:#166534;
+color:white;
+}
+
+.top{
+max-width:1150px;
+margin:auto;
+padding:15px 18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:25px;
+font-weight:900;
+color:white;
+text-decoration:none;
+}
+
+.logo span{color:#facc15}
+
+.home{
+color:white;
+text-decoration:none;
+font-size:14px;
+}
+
+.nav{
+background:white;
+border-bottom:1px solid #ddd;
+}
+
+.nav-inner{
+max-width:1150px;
+margin:auto;
+padding:12px 18px;
+display:flex;
+gap:10px;
+overflow-x:auto;
+}
+
+.nav a{
+white-space:nowrap;
+padding:8px 14px;
+border-radius:20px;
+background:#f0fdf4;
+color:#166534;
+text-decoration:none;
+font-size:13px;
+font-weight:bold;
+}
+
+.nav a.active{
+background:#16a34a;
+color:white;
+}
+
+.hero{
+padding:45px 18px;
+background:linear-gradient(135deg,#dcfce7,#bbf7d0);
+}
+
+.hero-inner{
+max-width:1150px;
+margin:auto;
+}
+
+.icon{
+font-size:55px;
+margin-bottom:10px;
+}
+
+.hero h1{
+font-size:clamp(32px,6vw,52px);
+margin-bottom:12px;
+}
+
+.hero p{
+max-width:700px;
+color:#166534;
+font-size:17px;
+line-height:1.6;
+}
+
+.container{
+max-width:1150px;
+margin:auto;
+padding:30px 18px;
+}
+
+.title{
+font-size:25px;
+margin-bottom:20px;
+}
+
+.farm-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.farm-card{
+background:white;
+border-radius:18px;
+padding:20px;
+border:1px solid #dcfce7;
+box-shadow:0 5px 20px #0000000a;
+}
+
+.farm-icon{
+font-size:45px;
+margin-bottom:12px;
+}
+
+.farm-card h2{
+font-size:19px;
+line-height:1.35;
+margin-bottom:9px;
+}
+
+.farm-card p{
+font-size:13px;
+color:#64748b;
+line-height:1.55;
+}
+
+.badge{
+display:inline-block;
+margin-top:14px;
+padding:5px 9px;
+border-radius:6px;
+background:#dcfce7;
+color:#166534;
+font-size:11px;
+font-weight:bold;
+}
+
+.tip{
+margin-top:25px;
+background:#166534;
+color:white;
+border-radius:18px;
+padding:24px;
+}
+
+.tip h2{
+margin-bottom:8px;
+}
+
+.tip p{
+color:#dcfce7;
+line-height:1.6;
+font-size:14px;
+}
+
+footer{
+margin-top:30px;
+background:#111827;
+color:#cbd5e1;
+text-align:center;
+padding:30px;
+font-size:13px;
+}
+
+@media(max-width:800px){
+.farm-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:550px){
+.farm-grid{grid-template-columns:1fr}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="top">
+
+<a href="index.html" class="logo">
+गांव की <span>बात</span>
+</a>
+
+<a href="index.html" class="home">← होम</a>
+
+</div>
+</header>
+
+<nav class="nav">
+<div class="nav-inner">
+
+<a href="news.html">📰 खबरें</a>
+<a href="emotional.html">❤️ भावुक</a>
+<a href="funny.html">😂 मजेदार</a>
+<a href="farming.html" class="active">🌾 खेती</a>
+<a href="schemes.html">💰 योजनाएं</a>
+<a href="entertainment.html">🎬 मनोरंजन</a>
+<a href="deals.html">🛍️ सामान</a>
+
+</div>
+</nav>
+
+<section class="hero">
+<div class="hero-inner">
+
+<div class="icon">🌾</div>
+
+<h1>खेती-किसानी की जानकारी</h1>
+
+<p>
+खेती, पशुपालन, फसल और किसान के रोजमर्रा
+के काम की उपयोगी जानकारी एक जगह।
+</p>
+
+</div>
+</section>
+
+<main class="container">
+
+<h2 class="title">🌱 आज की किसान जानकारी</h2>
+
+<div class="farm-grid">
+
+<div class="farm-card">
+<div class="farm-icon">🌾</div>
+<h2>फसल की देखभाल के जरूरी तरीके</h2>
+<p>
+फसल की अच्छी growth के लिए उपयोगी
+कृषि जानकारी यहां दिखाई जाएगी।
+</p>
+<span class="badge">किसान जानकारी</span>
+</div>
+
+<div class="farm-card">
+<div class="farm-icon">💧</div>
+<h2>सिंचाई से जुड़ी जरूरी बातें</h2>
+<p>
+पानी की सही मात्रा और सिंचाई से जुड़ी
+जानकारी किसानों के लिए।
+</p>
+<span class="badge">खेती टिप्स</span>
+</div>
+
+<div class="farm-card">
+<div class="farm-icon">🐄</div>
+<h2>पशुपालन की उपयोगी जानकारी</h2>
+<p>
+पशुओं की देखभाल और पशुपालन से जुड़ी
+जानकारी।
+</p>
+<span class="badge">पशुपालन</span>
+</div>
+
+<div class="farm-card">
+<div class="farm-icon">🚜</div>
+<h2>खेती में काम आने वाले उपकरण</h2>
+<p>
+किसानों के लिए उपयोगी मशीन और
+खेती के उपकरण।
+</p>
+<span class="badge">कृषि उपकरण</span>
+</div>
+
+<div class="farm-card">
+<div class="farm-icon">🌱</div>
+<h2>नई खेती के तरीके</h2>
+<p>
+आधुनिक खेती और बेहतर उत्पादन से
+जुड़ी जानकारी।
+</p>
+<span class="badge">नई तकनीक</span>
+</div>
+
+<div class="farm-card">
+<div class="farm-icon">💰</div>
+<h2>किसानों के लिए बाजार जानकारी</h2>
+<p>
+मंडी और कृषि बाजार से जुड़ी उपयोगी
+जानकारी।
+</p>
+<span class="badge">कृषि बाजार</span>
+</div>
+
+</div>
+
+<div class="tip">
+
+<h2>🌾 किसान भाइयों के लिए</h2>
+
+<p>
+किसी भी कृषि सलाह, दवा या सरकारी
+योजना से जुड़ी जानकारी को इस्तेमाल
+करने से पहले संबंधित आधिकारिक स्रोत
+से जानकारी की पुष्टि जरूर करें।
+</p>
+
+</div>
+
+</main>
+
+<footer>
+© 2026 गांव की बात<br><br>
+खेती • किसान • पशुपालन
+</footer>
+
+</body>
+</html>
