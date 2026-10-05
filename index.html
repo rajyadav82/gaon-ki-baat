@@ -172,6 +172,31 @@ header{
     cursor:pointer;
 }
 
+
+.quick-categories{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-top:24px;
+    max-width:650px;
+}
+.quick-categories a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:52px;
+    padding:13px 16px;
+    border-radius:13px;
+    background:white;
+    color:#172033;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:800;
+    border:1px solid #e5e7eb;
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
+}
+.quick-categories a:hover{transform:translateY(-2px)}
+
 /* =========================
    SECTION
 ========================= */
@@ -506,19 +531,15 @@ footer{
 </p>
 
 
-<div class="search-box">
-
-<input
-type="text"
-id="searchInput"
-placeholder="खबर या कैटेगरी खोजें..."
->
-
-<button onclick="searchWebsite()">
-खोजें
-</button>
-
-</div>
+<div class="quick-categories">
+<a href="news.html">📰 आज की वायरल खबर</a>
+<a href="funny.html">😂 मजेदार वीडियो</a>
+<a href="schemes.html">💰 सरकारी योजनाएं</a>
+<a href="farming.html">🌾 खेती-किसानी</a>
+<a href="emotional.html">❤️ दिल छू लेने वाली</a>
+<a href="entertainment.html">🎬 मनोरंजन</a>
+<a href="deals.html">🛍️ सस्ते और काम के सामान</a>
+</div></div>
 
 </div>
 
@@ -530,151 +551,7 @@ placeholder="खबर या कैटेगरी खोजें..."
      CATEGORIES
 ========================= -->
 
-<section class="section" id="categories">
 
-<h2 class="section-title">
-🔥 लोकप्रिय कैटेगरी
-</h2>
-
-
-<div class="categories">
-
-
-<a href="news.html" class="category">
-
-<div class="category-icon">
-📰
-</div>
-
-<h3>
-आज की वायरल खबरें
-</h3>
-
-<p>
-गांव, शहर और आसपास की
-चर्चित खबरें।
-</p>
-
-</a>
-
-
-
-<a href="emotional.html" class="category">
-
-<div class="category-icon">
-❤️
-</div>
-
-<h3>
-दिल छू लेने वाली खबरें
-</h3>
-
-<p>
-मदद, इंसानियत और
-प्रेरणादायक कहानियां।
-</p>
-
-</a>
-
-
-
-<a href="funny.html" class="category">
-
-<div class="category-icon">
-😂
-</div>
-
-<h3>
-मजेदार वीडियो
-</h3>
-
-<p>
-देसी अंदाज के मजेदार
-और मनोरंजक वीडियो।
-</p>
-
-</a>
-
-
-
-<a href="farming.html" class="category">
-
-<div class="category-icon">
-🌾
-</div>
-
-<h3>
-खेती-किसानी की जानकारी
-</h3>
-
-<p>
-खेती, पशुपालन और
-किसान उपयोगी जानकारी।
-</p>
-
-</a>
-
-
-
-<a href="schemes.html" class="category">
-
-<div class="category-icon">
-💰
-</div>
-
-<h3>
-सरकारी योजनाएं
-</h3>
-
-<p>
-सरकारी योजनाओं और
-सुविधाओं की जानकारी।
-</p>
-
-</a>
-
-
-
-<a href="entertainment.html" class="category">
-
-<div class="category-icon">
-🎬
-</div>
-
-<h3>
-मनोरंजन
-</h3>
-
-<p>
-फिल्म, टीवी, भोजपुरी और
-वायरल मनोरंजन।
-</p>
-
-</a>
-
-
-
-<a href="deals.html" class="category">
-
-<div class="category-icon">
-🛍️
-</div>
-
-<h3>
-सस्ते और काम के सामान
-</h3>
-
-<p>
-घर और रोजमर्रा के काम
-के उपयोगी सामान।
-</p>
-
-</a>
-
-
-</div>
-
-</section>
 
 
 
