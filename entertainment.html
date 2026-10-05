@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>मनोरंजन | गांव की बात</title>
+
+<style>
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+font-family:Arial,sans-serif;
+background:#faf5ff;
+color:#171717;
+}
+
+header{
+background:linear-gradient(135deg,#581c87,#9333ea);
+color:white;
+}
+
+.top{
+max-width:1150px;
+margin:auto;
+padding:15px 18px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+font-size:25px;
+font-weight:900;
+color:white;
+text-decoration:none;
+}
+
+.logo span{color:#facc15}
+
+.home{
+color:white;
+text-decoration:none;
+font-size:14px;
+}
+
+.nav{
+background:white;
+border-bottom:1px solid #ddd;
+}
+
+.nav-inner{
+max-width:1150px;
+margin:auto;
+padding:12px 18px;
+display:flex;
+gap:10px;
+overflow-x:auto;
+}
+
+.nav a{
+white-space:nowrap;
+padding:8px 14px;
+border-radius:20px;
+background:#faf5ff;
+color:#6b21a8;
+text-decoration:none;
+font-size:13px;
+font-weight:bold;
+}
+
+.nav a.active{
+background:#9333ea;
+color:white;
+}
+
+.hero{
+padding:45px 18px;
+background:linear-gradient(135deg,#f3e8ff,#e9d5ff);
+}
+
+.hero-inner{
+max-width:1150px;
+margin:auto;
+}
+
+.icon{
+font-size:55px;
+margin-bottom:10px;
+}
+
+.hero h1{
+font-size:clamp(32px,6vw,52px);
+margin-bottom:12px;
+}
+
+.hero p{
+max-width:700px;
+color:#6b21a8;
+font-size:17px;
+line-height:1.6;
+}
+
+.container{
+max-width:1150px;
+margin:auto;
+padding:30px 18px;
+}
+
+.title{
+font-size:25px;
+margin-bottom:20px;
+}
+
+.ent-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.ent{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 5px 20px #0000000a;
+}
+
+.ent-image{
+height:210px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:75px;
+background:linear-gradient(135deg,#f3e8ff,#e9d5ff);
+}
+
+.ent-content{
+padding:18px;
+}
+
+.ent-content span{
+font-size:11px;
+font-weight:900;
+color:#9333ea;
+}
+
+.ent-content h2{
+font-size:19px;
+line-height:1.4;
+margin:7px 0;
+}
+
+.ent-content p{
+font-size:13px;
+color:#6b7280;
+line-height:1.5;
+}
+
+footer{
+margin-top:30px;
+background:#111827;
+color:#cbd5e1;
+text-align:center;
+padding:30px;
+font-size:13px;
+}
+
+@media(max-width:800px){
+.ent-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:550px){
+.ent-grid{grid-template-columns:1fr}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="top">
+
+<a href="index.html" class="logo">
+गांव की <span>बात</span>
+</a>
+
+<a href="index.html" class="home">← होम</a>
+
+</div>
+
+</header>
+
+<nav class="nav">
+<div class="nav-inner">
+
+<a href="news.html">📰 खबरें</a>
+<a href="emotional.html">❤️ भावुक</a>
+<a href="funny.html">😂 मजेदार</a>
+<a href="farming.html">🌾 खेती</a>
+<a href="schemes.html">💰 योजनाएं</a>
+<a href="entertainment.html" class="active">🎬 मनोरंजन</a>
+<a href="deals.html">🛍️ सामान</a>
+
+</div>
+</nav>
+
+<section class="hero">
+
+<div class="hero-inner">
+
+<div class="icon">🎬</div>
+
+<h1>मनोरंजन</h1>
+
+<p>
+फिल्म, टीवी, भोजपुरी entertainment,
+celebrities और viral entertainment updates।
+</p>
+
+</div>
+
+</section>
+
+<main class="container">
+
+<h2 class="title">🔥 आज का मनोरंजन</h2>
+
+<div class="ent-grid">
+
+<div class="ent">
+<div class="ent-image">🎬</div>
+<div class="ent-content">
+<span>ENTERTAINMENT</span>
+<h2>आज की बड़ी entertainment खबर</h2>
+<p>मनोरंजन जगत की नई और चर्चित जानकारी।</p>
+</div>
+</div>
+
+<div class="ent">
+<div class="ent-image">🎤</div>
+<div class="ent-content">
+<span>MUSIC</span>
+<h2>नया गाना सोशल मीडिया पर हुआ वायरल</h2>
+<p>लोगों के बीच तेजी से popular हो रहा content।</p>
+</div>
+</div>
+
+<div class="ent">
+<div class="ent-image">🎥</div>
+<div class="ent-content">
+<span>FILM</span>
+<h2>फिल्म से जुड़ा नया update</h2>
+<p>फिल्म और cinema से जुड़ी जानकारी।</p>
+</div>
+</div>
+
+<div class="ent">
+<div class="ent-image">⭐</div>
+<div class="ent-content">
+<span>CELEBRITY</span>
+<h2>Celebrity की यह खबर हुई वायरल</h2>
+<p>Entertainment world का trending update।</p>
+</div>
+</div>
+
+<div class="ent">
+<div class="ent-image">🎭</div>
+<div class="ent-content">
+<span>VIRAL</span>
+<h2>यह viral moment लोगों को आया पसंद</h2>
+<p>सोशल मीडिया पर चर्चित entertainment moment।</p>
+</div>
+</div>
+
+<div class="ent">
+<div class="ent-image">📺</div>
+<div class="ent-content">
+<span>TV</span>
+<h2>टीवी जगत का नया update</h2>
+<p>TV और web entertainment की जानकारी।</p>
+</div>
+</div>
+
+</div>
+
+</main>
+
+<footer>
+© 2026 गांव की बात<br><br>
+मनोरंजन • फिल्म • संगीत • वायरल
+</footer>
+
+</body>
+</html>
