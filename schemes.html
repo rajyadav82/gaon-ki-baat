@@ -328,5 +328,32 @@ font-size:13px;
 सरकारी जानकारी • योजनाएं • सुविधाएं
 </footer>
 
+<script>
+(function(){
+const page=location.pathname.split("/").pop()||"index.html";
+const map={"emotional.html":"emotional","funny.html":"funny","farming.html":"farming","schemes.html":"schemes","entertainment.html":"entertainment"};
+const cat=map[page]; if(!cat)return;
+const esc=s=>{const d=document.createElement("div");d.textContent=s||"";return d.innerHTML};
+const safe=u=>{try{const x=new URL(u);return /^https?:$/.test(x.protocol)?x.href:"#"}catch{return "#"}};
+fetch("data/"+cat+".json?ts="+Date.now()).then(r=>r.json()).then(d=>{
+const a=d.articles||[]; if(!a.length)return;
+const sel={funny:".video-grid",farming:".farm-grid",schemes:".scheme-grid",entertainment:".ent-grid"};
+if(cat==="emotional"){
+const b=document.querySelector(".layout section");if(!b)return;
+b.innerHTML='<h2 class="section-title">❤️ आज की दिल छू लेने वाली कहानियां</h2>'+a.slice(0,10).map((x,i)=>'<article class="story"><div class="story-image">'+(i%2?"🤝":"❤️")+'</div><div class="story-content"><span class="tag">इंसानियत</span><h2>'+esc(x.title)+'</h2><p>'+esc(x.description)+'</p><div class="meta">'+esc(x.date)+' • <a href="'+safe(x.url)+'" target="_blank" rel="noopener">पूरी खबर →</a></div></div></article>').join("");
+return;
+}
+const b=document.querySelector(sel[cat]);if(!b)return;
+const icons={funny:["😂","🤣","😆","😜"],farming:["🌾","🚜","💧","🌱"],schemes:["💰","🏠","👩","🎓"],entertainment:["🎬","🎤","⭐","📺"]}[cat];
+b.innerHTML=a.slice(0,12).map((x,i)=>{
+const t=esc(x.title),p=esc(x.description),u=safe(x.url),ic=icons[i%icons.length];
+if(cat==="funny")return '<article class="video"><div class="video-thumb">'+ic+'<div class="play">▶</div></div><div class="video-body"><h2>'+t+'</h2><p>'+p+'</p><div class="views">🕒 '+esc(x.date)+'</div><a href="'+u+'" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;color:#ea580c;font-weight:bold;text-decoration:none">पूरी खबर/वीडियो →</a></div></article>';
+if(cat==="farming")return '<article class="farm-card"><div class="farm-icon">'+ic+'</div><h2>'+t+'</h2><p>'+p+'</p><a href="'+u+'" target="_blank" rel="noopener" class="badge" style="text-decoration:none">पूरी जानकारी →</a></article>';
+if(cat==="schemes")return '<article class="scheme"><div class="scheme-icon">'+ic+'</div><h2>'+t+'</h2><p>'+p+'</p><a href="'+u+'" target="_blank" rel="noopener" class="scheme-btn">स्रोत देखें →</a></article>';
+return '<article class="ent"><div class="ent-image">'+ic+'</div><div class="ent-content"><span>UPDATE</span><h2>'+t+'</h2><p>'+p+'</p><a href="'+u+'" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;color:#9333ea;font-weight:bold;text-decoration:none">पूरी खबर →</a></div></article>';
+}).join("");
+}).catch(()=>{});
+})();
+</script>
 </body>
 </html>
