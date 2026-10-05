@@ -689,92 +689,63 @@ placeholder="खबर या कैटेगरी खोजें..."
 </h2>
 
 
-<div class="articles">
-
-
+<div class="articles" id="latestArticles">
 <article class="article">
-
-<div class="article-image">
-📰
-</div>
-
+<div class="article-image">⏳</div>
 <div class="article-content">
-
-<div class="article-tag">
-Viral News
+<div class="article-tag">LATEST</div>
+<h3>लेटेस्ट पोस्ट लोड हो रही है...</h3>
+<p>नई खबरें लोड की जा रही हैं।</p>
 </div>
-
-<h3>
-आज की वायरल खबर यहां दिखाई जाएगी
-</h3>
-
-<p>
-यह जगह बाद में daily automation
-से automatically update की जा सकती है।
-</p>
-
-</div>
-
 </article>
-
-
-
-<article class="article">
-
-<div class="article-image">
-🌾
 </div>
 
-<div class="article-content">
-
-<div class="article-tag">
-Farming
-</div>
-
-<h3>
-किसानों के लिए आज की उपयोगी जानकारी
-</h3>
-
-<p>
-खेती और पशुपालन से जुड़ी
-नई जानकारी यहां आएगी।
-</p>
-
-</div>
-
-</article>
-
-
-
-<article class="article">
-
-<div class="article-image">
-💰
-</div>
-
-<div class="article-content">
-
-<div class="article-tag">
-Government
-</div>
-
-<h3>
-सरकारी योजनाओं की नई जानकारी
-</h3>
-
-<p>
-नई योजनाओं और सरकारी updates
-यहां दिखाई जा सकती हैं।
-</p>
-
-</div>
-
-</article>
-
-
-</div>
-
-
+<script>
+async function loadLatestPosts(){
+    const box=document.getElementById("latestArticles");
+    try{
+        const response=await fetch("data/news.json?time="+Date.now());
+        if(!response.ok) throw new Error("news.json नहीं मिला");
+        const data=await response.json();
+        const articles=(data.articles||[]).slice(0,3);
+        if(!articles.length){
+            box.innerHTML='<div class="article"><div class="article-content"><h3>अभी नई पोस्ट उपलब्ध नहीं है।</h3><p>थोड़ी देर बाद फिर देखें।</p></div></div>';
+            return;
+        }
+        box.innerHTML="";
+        articles.forEach(article=>{
+            const card=document.createElement("a");
+            card.className="article";
+            card.href=safeNewsURL(article.url);
+            card.target="_blank";
+            card.rel="noopener noreferrer";
+            card.style.textDecoration="none";
+            card.style.color="inherit";
+            card.innerHTML=`
+                <div class="article-image">📰</div>
+                <div class="article-content">
+                    <div class="article-tag">VIRAL NEWS</div>
+                    <h3>${escapeLatest(article.title)}</h3>
+                    <p>${escapeLatest(article.description||"पूरी खबर पढ़ने के लिए खोलें।")}</p>
+                    <p style="margin-top:10px;font-size:11px;color:#9ca3af">${escapeLatest(article.date||"")}</p>
+                </div>`;
+            box.appendChild(card);
+        });
+    }catch(error){
+        box.innerHTML='<div class="article"><div class="article-content"><h3>पोस्ट अभी लोड नहीं हो पाई।</h3><p>कृपया थोड़ी देर बाद फिर कोशिश करें।</p></div></div>';
+    }
+}
+function escapeLatest(value){
+    return String(value||"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[ch]));
+}
+function safeNewsURL(value){
+    try{
+        const url=new URL(value,window.location.href);
+        return (url.protocol==="http:"||url.protocol==="https:")?url.href:"#";
+    }catch(e){return "#";}
+}
+loadLatestPosts();
+</script>
 
 <!-- =========================
      CTA
