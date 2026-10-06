@@ -1,6 +1,7 @@
 name: Gaon Ki Baat Daily Update
 
 on:
+  push:
   schedule:
     # रोज सुबह लगभग 8:15 बजे (India time)
     - cron: "45 2 * * *"
