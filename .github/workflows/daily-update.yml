@@ -2,7 +2,9 @@ name: Gaon Ki Baat Daily Update
 
 on:
   schedule:
-    - cron: "30 2 * * *"
+    # रोज सुबह 8:15 बजे (India time)
+    - cron: "15 8 * * *"
+      timezone: "Asia/Kolkata"
   workflow_dispatch:
 
 permissions:
