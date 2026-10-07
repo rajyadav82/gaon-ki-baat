@@ -25,6 +25,9 @@ jobs:
       - name: Update all categories
         run: python scripts/update-all.py
 
+      - name: Update main news
+        run: python scripts/update-news.py
+
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
